@@ -1,3 +1,5 @@
+option(ENABLE_WIFI "enable wifi support" on)
+
 function(set_env_byFile filename target_var)
   if(NOT EXISTS "${filename}")
     set(${target_var} "" PARENT_SCOPE)
@@ -32,7 +34,11 @@ add_compile_definitions(${bl_defines})
 
 # 链接静态库
 link_directories(${SDK_ROOT}/libs)
-link_libraries(-Wl,--start-group app lhal std utils mm mbedtls libc freertos -Wl,--end-group)
+if(ENABLE_WIFI)
+  link_libraries(-Wl,--start-group app lhal std utils mm mbedtls libc freertos lwip rf rfparam wifi6 wifi6_matter bl6_os_adapter csi_xt900p32f_dsp dhcpd pka shell m -Wl,--end-group)
+else()
+  link_libraries(-Wl,--start-group app lhal std utils mm mbedtls libc freertos -Wl,--end-group)
+endif()
 
 add_executable(${PROJECT_NAME} ${SRC} )
 

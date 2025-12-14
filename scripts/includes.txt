@@ -24,3 +24,8 @@ ${SDK_ROOT}/sdk/drivers/lhal/config/bl616
 ${SDK_ROOT}/sdk/drivers/lhal/src/flash
 ${SDK_ROOT}/sdk/drivers/soc/bl616/std/include
 ${SDK_ROOT}/sdk/drivers/soc/bl616/std/include/hardware
+${SDK_ROOT}/sdk/components/net/lwip/lwip/src/include
+${SDK_ROOT}/sdk/components/net/lwip/lwip/lwip-port
+${SDK_ROOT}/sdk/components/wireless/wifi6/inc
+${SDK_ROOT}/sdk/components/wireless/wifi6/bl6_os_adapter/include
+${SDK_ROOT}/sdk/components/net/lwip/lwip/src/include/compat/posix

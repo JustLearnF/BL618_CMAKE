@@ -1,0 +1,6 @@
+/home/hunter/workspace/Code/BL618/code/wifi/source/bl618_wifi.c:23:9:bl618_wifi_connect	16	static
+/home/hunter/workspace/Code/BL618/code/wifi/source/bl618_wifi.c:46:9:bl618_wifi_ap_start	48	static
+/home/hunter/workspace/Code/BL618/code/wifi/source/bl618_wifi.c:63:6:bl618_wifi_init	16	static
+/home/hunter/workspace/Code/BL618/code/wifi/source/bl618_wifi.c:93:6:wifi_event_handler	16	static
+/home/hunter/workspace/Code/BL618/code/wifi/source/bl618_wifi.c:182:6:bl618_wifi_callback_register	0	static
+/home/hunter/workspace/Code/BL618/code/wifi/source/bl618_wifi.c:269:6:bl618_wifi_callback_unregister	0	static
