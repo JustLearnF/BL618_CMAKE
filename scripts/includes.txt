@@ -40,3 +40,4 @@ ${SDK_ROOT}/sdk/drivers/soc/bl616/std/include
 ${SDK_ROOT}/sdk/drivers/soc/bl616/std/include/hardware
 ${SDK_ROOT}/sdk/drivers/soc/bl616/rf/inc
 ${SDK_ROOT}/sdk/drivers/rfparam/Inc
+${SDK_ROOT}/scripts

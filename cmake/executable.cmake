@@ -32,7 +32,7 @@ add_compile_definitions(${bl_defines})
 
 # 链接静态库
 link_directories(${SDK_ROOT}/libs)
-link_libraries(-Wl,--start-group app lhal libc mm std utils pka csi_xt900p32f_dsp freertos shell bl6_os_adapter dhcpd lwip mbedtls rf rfparam wifi6 -Wl,--end-group -Wl,--no-whole-archive -Wl,--start-group m gcc c -Wl,--end-group -Wl,-EL)
+link_libraries(-Wl,--start-group app lhal libc mm std utils pka csi_xt900p32f_dsp freertos shell bl6_os_adapter dhcpd lwip mbedtls rf rfparam wifi6 m gcc c -Wl,--end-group -Wl,-EL)
 
 add_executable(${PROJECT_NAME} ${SRC} )
 
