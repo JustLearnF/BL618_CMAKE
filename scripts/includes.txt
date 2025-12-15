@@ -29,3 +29,5 @@ ${SDK_ROOT}/sdk/components/net/lwip/lwip/lwip-port
 ${SDK_ROOT}/sdk/components/wireless/wifi6/inc
 ${SDK_ROOT}/sdk/components/wireless/wifi6/bl6_os_adapter/include
 ${SDK_ROOT}/sdk/components/net/lwip/lwip/src/include/compat/posix
+${SDK_ROOT}/sdk/drivers/rfparam/Inc
+${SDK_ROOT}/sdk/components/net/lwip/lwip/src/include/lwip
