@@ -1,6 +1,10 @@
 -Wl,--cref
 -Wl,--gc-sections
 -nostartfiles
+-fno-use-cxa-atexit
+-nostdlib
+-fno-rtti
+-fno-exceptions
 -fms-extensions
 -ffunction-sections
 -fdata-sections
