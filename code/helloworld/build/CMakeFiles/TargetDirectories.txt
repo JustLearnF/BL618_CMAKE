@@ -1,3 +1,0 @@
-/home/hunter/workspace/Code/BL618/code/helloworld/build/CMakeFiles/helloworld.dir
-/home/hunter/workspace/Code/BL618/code/helloworld/build/CMakeFiles/edit_cache.dir
-/home/hunter/workspace/Code/BL618/code/helloworld/build/CMakeFiles/rebuild_cache.dir
