@@ -1,3 +1,4 @@
+-w
 -Wl,--cref
 -Wl,--gc-sections
 -nostartfiles

@@ -1,5 +1,3 @@
-option(ENABLE_WIFI "enable wifi support" on)
-
 function(set_env_byFile filename target_var)
   if(NOT EXISTS "${filename}")
     set(${target_var} "" PARENT_SCOPE)
@@ -26,7 +24,7 @@ include_directories(${bl_includes_expanded})
 
 # 设置链接选项
 set_env_byFile("${SDK_ROOT}/scripts/ldflags.txt" bl_ldflags)
-add_link_options(-T${SDK_ROOT}/scripts/linker_script.ld ${bl_ldflags})
+add_link_options(${bl_ldflags} -T${SDK_ROOT}/scripts/linker_script.ld --specs=nosys.specs)
 
 # 设置宏定义
 set_env_byFile("${SDK_ROOT}/scripts/defines.txt" bl_defines)
@@ -34,11 +32,7 @@ add_compile_definitions(${bl_defines})
 
 # 链接静态库
 link_directories(${SDK_ROOT}/libs)
-if(ENABLE_WIFI)
-  link_libraries(-Wl,--start-group app lhal std utils mm mbedtls libc freertos lwip rf rfparam wifi6 bl6_os_adapter csi_xt900p32f_dsp dhcpd pka shell m gcc c stdc++ -Wl,--end-group)
-else()
-  link_libraries(-Wl,--start-group app lhal std utils mm mbedtls libc freertos gcc c stdc++ -Wl,--end-group)
-endif()
+link_libraries(-Wl,--start-group app lhal libc mm std utils pka csi_xt900p32f_dsp freertos shell bl6_os_adapter dhcpd lwip mbedtls rf rfparam wifi6 -Wl,--end-group -Wl,--no-whole-archive -Wl,--start-group m gcc c -Wl,--end-group -Wl,-EL)
 
 add_executable(${PROJECT_NAME} ${SRC} )
 

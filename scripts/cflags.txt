@@ -1,4 +1,5 @@
 -c
+-w
 -D__riscv
 -D__riscv_xlen=32
 -g3

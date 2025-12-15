@@ -7,5 +7,3 @@
 4. 在CMakeLists.txt中引用executable.cmake
 5. 执行cmake -S. -Bbuild && cmake --build build编译
 6. build目录会生成可烧录文件
-# 注
-默认开启wifi，若要关闭wifi支持，修改cmake/excutable.cmake中的ENABLE_WIFI选项为off
