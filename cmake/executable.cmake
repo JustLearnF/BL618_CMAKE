@@ -53,3 +53,13 @@ add_custom_command(
   COMMENT 
   "Generate binary file." 
 )
+
+add_custom_command(
+  TARGET
+    ${PROJECT_NAME}
+  POST_BUILD
+  COMMAND 
+    ${SDK_ROOT}/scripts/bin/bflb_fw_post_proc-ubuntu --chipname=bl616 --brdcfgdir=${SDK_ROOT}/scripts/config --imgfile=${CMAKE_BINARY_DIR}/${PROJECT_NAME}.bin
+  COMMENT 
+  "Pack binary file." 
+)
